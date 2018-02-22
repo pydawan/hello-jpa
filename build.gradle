@@ -4,12 +4,20 @@ apply plugin: 'idea'
 
 apply plugin: 'application'
 
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
 repositories {
     jcenter()
 }
 
 dependencies {
+    compile 'log4j:log4j:1.2.17'
     compile 'com.google.guava:guava:23.0'
+    compile 'com.h2database:h2:1.4.196'
+    compile 'javax.persistence:javax.persistence-api:2.2'
+    compile 'org.hibernate:hibernate-core:5.2.13.Final'
+    compile 'org.hibernate:hibernate-entitymanager:5.2.13.Final'
     testCompile 'junit:junit:4.12'
 }
 
