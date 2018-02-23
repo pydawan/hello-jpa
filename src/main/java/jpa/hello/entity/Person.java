@@ -1,10 +1,11 @@
 package jpa.hello.entity;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "T_PERSON")
-public class Person {
+public class Person implements Serializable {
 
     private Long id;
     private String firstName;
