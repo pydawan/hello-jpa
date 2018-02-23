@@ -29,6 +29,7 @@ public class App {
             person.setFirstName("Homer");
             person.setLastName("Simpson");
             entityManager.persist(person);
+            entityManager.createQuery("SELECT p FROM Person p");
             transaction.commit();
         } catch (Exception e) {
             if (transaction != null && transaction.isActive()) {
